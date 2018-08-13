@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find([:id])
+    @article = Article.find(params[:id])
   end
 
   def create
@@ -33,8 +33,11 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+
   end
-  
+
+
+
 
   private
     def article_params
